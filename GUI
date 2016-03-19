@@ -1,0 +1,47 @@
+import java.awt.*;
+import java.applet.*;
+public class gui extends Applet
+{
+	Label l1=new Label("Name");
+	Label l2=new Label("Age");
+	Label l3=new Label("Qualification");
+	TextField t1=new TextField(10);
+	TextField t2=new TextField(10);
+
+	CheckboxGroup c=new CheckboxGroup();
+	Checkbox male=new Checkbox("male",c,true);
+	Checkbox female=new Checkbox("female",c,false);
+
+	Choice qual=new Choice();
+
+	Button b1=new Button("Done");
+	Button b2=new Button("Exit");
+
+
+	Panel p1=new Panel();
+	public void init()
+	{
+			qual.add("BCom");
+			qual.add("BA");
+			qual.add("BSc");
+
+			p1.setLayout(new GridLayout(5,2));
+
+			p1.add(l1);
+			p1.add(t1);
+			p1.add(l2);
+			p1.add(t2);
+			p1.add(male);
+
+			p1.add(female);
+			p1.add(l3);
+			p1.add(qual);
+			p1.add(b1);
+			p1.add(b2);
+			add(p1);
+
+	}
+
+}
+
+
